@@ -46,6 +46,11 @@ body{
     height: 100%;
 }
 .texto{
+    display: flex;
+    justify-content: center; 
+    font-family: "Cookie", serif;
+    font-weight: bold;
+    color: rgb(116, 88, 93);
     width: 100dvw;
     text-align: center;
     margin-top:40px;
@@ -66,4 +71,44 @@ a{
     margin: auto;
     font-family: "Bellota", serif;
 
+}
+
+.letra1, .letra2, .letra3, .letra4, .letra5 ,.letra6{
+    animation-name:movimiento ;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    margin-inline: 10px;
+}
+.letra1{
+    animation-delay: 0s;
+}
+.letra2{
+    animation-delay: 1s;
+}
+.letra3{
+    animation-delay: 2s;
+}
+.letra4{
+    animation-delay: 2s;
+}
+.letra5{
+    animation-delay: 3s;
+}
+.letra6{
+    animation-delay: 4s;
+}
+
+
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
