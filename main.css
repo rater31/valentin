@@ -1,18 +1,21 @@
-body{
+body {
     overflow: hidden;
 }
+
 :root {
     --dark-color: #000;
-  }
-  .container{
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-wrap: wrap;
-  }
-.relative{
-    
+}
+
+.relative {
+
     width: 250px;
     height: 500px;
     position: relative;
@@ -21,6 +24,7 @@ body{
     animation-duration: 2s;
 
 }
+
 .noche {
     z-index: -1;
     position: absolute;
@@ -29,84 +33,88 @@ body{
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    filter: blur(0.1vmin); 
-    background-image: radial-gradient(
-        ellipse at top,
-        transparent 0%,
-        var(--dark-color),
-        rgba(145, 233, 255, 0.2)
+    filter: blur(0.1vmin);
+    background-image: radial-gradient(ellipse at top,
+            transparent 0%,
+            var(--dark-color),
+            rgba(145, 233, 255, 0.2)),
+        radial-gradient(ellipse at bottom,
+            var(--dark-color),
+            rgba(145, 233, 255, 0.2)),
+        repeating-linear-gradient(220deg,
+            rgb(0, 0, 0) 0px,
+            rgb(0, 0, 0) 19px,
+            transparent 19px,
+            transparent 22px),
+        repeating-linear-gradient(189deg,
+            rgb(0, 0, 0) 0px,
+            rgb(0, 0, 0) 19px,
+            transparent 19px,
+            transparent 22px),
+        repeating-linear-gradient(148deg,
+            rgb(0, 0, 0) 0px,
+            rgb(0, 0, 0) 19px,
+            transparent 19px,
+            transparent 22px),
+        linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 
-      ),
-      radial-gradient(
-        ellipse at bottom,
-        var(--dark-color),
-        rgba(145, 233, 255, 0.2)
-      ),
-      repeating-linear-gradient(
-        220deg,
-        rgb(0, 0, 0) 0px,
-        rgb(0, 0, 0) 19px,
-        transparent 19px,
-        transparent 22px
-      ),
-      repeating-linear-gradient(
-        189deg,
-        rgb(0, 0, 0) 0px,
-        rgb(0, 0, 0) 19px,
-        transparent 19px,
-        transparent 22px
-      ),
-      repeating-linear-gradient(
-        148deg,
-        rgb(0, 0, 0) 0px,
-        rgb(0, 0, 0) 19px,
-        transparent 19px,
-        transparent 22px
-      ),
-      linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
-      
-  }
+}
 
-.petalo1{
+.petalo1 {
     width: 100px;
     height: 100px;
     top: 27%;
     left: 29.5%;
-    border-radius: 85% 0% 45% 0% / 59% 0% 87% 1% ;
+    border-radius: 85% 0% 45% 0% / 59% 0% 87% 1%;
     background: linear-gradient(90deg, rgb(230, 35, 35, 0.575) 44%, rgba(238, 97, 97, 0.729) 93%);
     position: absolute;
     transform: rotate(135deg);
     transform-origin: center, bottom;
     z-index: 2;
+    animation-name: movimiento;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.petalo2{
-    
-        width: 100px;
-        height: 100px;
-        top: 28%;
-        left: 16%;
-        border-radius: 85% 0% 45% 0% / 59% 0% 87% 1% ;
-        background: linear-gradient(90deg, rgba(230, 35, 35, 0.575) 44%, rgba(238, 97, 97, 0.729) 93%);
-        position: absolute;
-        transform: rotate(110deg);
-        transform-origin: center, bottom;
-        z-index: 1;
-    
+
+.petalo2 {
+
+    width: 100px;
+    height: 100px;
+    top: 28%;
+    left: 16%;
+    border-radius: 85% 0% 45% 0% / 59% 0% 87% 1%;
+    background: linear-gradient(90deg, rgba(230, 35, 35, 0.575) 44%, rgba(238, 97, 97, 0.729) 93%);
+    position: absolute;
+    transform: rotate(110deg);
+    transform-origin: center, bottom;
+    z-index: 1;
+    animation-name: movimiento2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
-.petalo3{
+
+.petalo3 {
     width: 100px;
     height: 100px;
     top: 28%;
     left: 42%;
-    border-radius: 85% 0% 45% 0% / 59% 0% 87% 1% ;
+    border-radius: 85% 0% 45% 0% / 59% 0% 87% 1%;
     background: linear-gradient(90deg, rgba(230, 35, 35, 0.575) 44%, rgba(238, 97, 97, 0.729) 93%);
     position: absolute;
     transform: rotate(160deg);
     transform-origin: center, bottom;
     z-index: 1;
+    animation-name: movimiento3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.tallo{
-    background: linear-gradient(90deg, rgba(9,121,39,1) 44%, rgba(0,0,0,0.7287289915966386) 93%);
+
+.tallo {
+    background: linear-gradient(90deg, rgba(9, 121, 39, 1) 44%, rgba(0, 0, 0, 0.7287289915966386) 93%);
     position: absolute;
     width: 10px;
     height: 50%;
@@ -120,43 +128,47 @@ body{
     height: 40px;
     bottom: 10%;
     left: 50%;
-    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0% ;
-    background: linear-gradient(90deg, rgba(9,121,39,1) 44%, rgba(191, 243, 157, 0.729) 93%);
+    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0%;
+    background: linear-gradient(90deg, rgba(9, 121, 39, 1) 44%, rgba(191, 243, 157, 0.729) 93%);
     position: absolute;
     /* transform: rotate(90deg); */
 }
+
 .hoja2 {
     width: 40px;
     height: 40px;
     bottom: 20%;
     left: 32%;
-    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0% ;
-    background: linear-gradient(90deg, rgba(9,121,39,1) 44%, rgba(191, 243, 157, 0.729) 93%);
+    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0%;
+    background: linear-gradient(90deg, rgba(9, 121, 39, 1) 44%, rgba(191, 243, 157, 0.729) 93%);
     position: absolute;
     transform: rotate(-90deg);
 }
+
 .hoja3 {
     width: 40px;
     height: 40px;
     bottom: 37%;
     left: 50%;
-    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0% ;
-    background: linear-gradient(90deg, rgba(9,121,39,1) 44%, rgba(191, 243, 157, 0.729) 93%);
+    border-radius: 86% 0% 80% 13% / 91% 12% 77% 0%;
+    background: linear-gradient(90deg, rgba(9, 121, 39, 1) 44%, rgba(191, 243, 157, 0.729) 93%);
     position: absolute;
     /* transform: rotate(90deg); */
 }
-h1{
+
+h1 {
     text-align: center;
-    color: red;
+    color: white;
     width: 100%;
     font-family: "Bellota", serif;
 }
-.particulas{
+
+.particulas {
     opacity: 0;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 0.8ms;
 
@@ -166,17 +178,18 @@ h1{
     left: 45%;
     border-radius: 100%;
     position: absolute;
-        background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    background-color: rgb(188, 143, 143);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas2{
+
+.particulas2 {
     opacity: 0;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 0.6s;
 
@@ -187,16 +200,17 @@ h1{
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas3{
+
+.particulas3 {
     opacity: 0;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 3s;
 
@@ -207,16 +221,17 @@ h1{
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas4{
+
+.particulas4 {
     opacity: 0;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 1.5s;
 
@@ -227,16 +242,17 @@ h1{
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas5{
+
+.particulas5 {
     opacity: 0;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 3s;
 
@@ -247,18 +263,19 @@ h1{
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas6{
+
+.particulas6 {
     opacity: 0;
-    
+
     animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 1.2s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1.2s;
 
     height: 3px;
     width: 3px;
@@ -267,11 +284,12 @@ animation-delay: 1.2s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas7{
+
+.particulas7 {
     opacity: 0;
 
     height: 3px;
@@ -283,16 +301,17 @@ animation-delay: 1.2s;
 
     animation-name: animationParticle;
     animation-duration: 10s;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 1s;
 
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 35px rgba(188,143,143,1);
+    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
 }
-.particulas8{
+
+.particulas8 {
     opacity: 0;
     height: 3px;
     width: 3px;
@@ -301,17 +320,17 @@ animation-delay: 1.2s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
-animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 0s;
+    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    animation-name: animationParticle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
 }
 
-.particulas9{
+.particulas9 {
     opacity: 0;
     height: 3px;
     width: 3px;
@@ -320,17 +339,17 @@ animation-delay: 0s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
-animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 5.5s;
+    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    animation-name: animationParticle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 5.5s;
 }
 
-.particulas10{
+.particulas10 {
     opacity: 0;
     height: 3px;
     width: 3px;
@@ -339,17 +358,17 @@ animation-delay: 5.5s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
-animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 7s;
+    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    animation-name: animationParticle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 7s;
 }
 
-.particulas11{
+.particulas11 {
     opacity: 0;
     height: 3px;
     width: 3px;
@@ -358,17 +377,17 @@ animation-delay: 7s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
-animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 6s;
+    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    animation-name: animationParticle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 6s;
 }
 
-.particulas12{
+.particulas12 {
     opacity: 0;
     height: 3px;
     width: 3px;
@@ -377,47 +396,109 @@ animation-delay: 6s;
     border-radius: 100%;
     position: absolute;
     background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--webkit-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
--moz-box-shadow: 0px 0px 400px 100px rgba(188,143,143,1);
-animation-name: animationParticle;
-animation-duration: 10s;
-animation-iteration-count: infinite ;
-animation-timing-function: linear;
-animation-delay: 5s;
+    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    animation-name: animationParticle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 5s;
 }
 
 
-@keyframes animationParticle{
-    0%{
+@keyframes animationParticle {
+    0% {
         opacity: 0.3;
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         opacity: 1;
         transform: translateY(-100px);
     }
-    65%{
+
+    65% {
         opacity: 1;
         transform: translateY(-200px);
     }
-    100%{
-        
+
+    100% {
+
         /* transform: translateY(-300); */
         opacity: 0;
     }
 }
-@keyframes animationPlanta{
-    0%{
-        bottom: 0;
-       transform: scale(0);
 
-       
+@keyframes animationPlanta {
+    0% {
+        bottom: 0;
+        transform: scale(0);
+
+
     }
 
-    100%{
+    100% {
         bottom: 0;
-      transform: scale(1);
-    
+        transform: scale(1);
+
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateX(0px) rotate(135deg);
+
+    }
+    25%{
+        transform: translateX(10px) rotate(135deg)
+
+    }
+    50% {
+        transform: translateX(0px) rotate(135deg)
+
+    }
+    75%{
+        transform: translateX(-10px) rotate(135deg)
+
+    }
+
+    100% {
+        transform: translateX(0px) rotate(135deg)
+    }
+}
+@keyframes movimiento2 {
+    0% {
+        transform: translateX(0px) rotate(110deg);
+    }
+    25%{
+        transform: translateX(10px) rotate(110deg)
+
+    }
+    50% {
+        transform: translateX(0px) rotate(110deg)
+
+    }
+    75%{
+        transform: translateX(-10px) rotate(110deg)
+
+    }
+    100% {
+        transform: translateX(0px) rotate(110deg)
+    }
+}
+@keyframes movimiento3 {
+    0% {
+        transform: translateX(0px) rotate(160deg);
+
+    }
+
+    50% {
+        transform:  rotate(175deg)
+
+    }
+
+    100% {
+        transform: translateX(0px) rotate(160deg)
     }
 }
