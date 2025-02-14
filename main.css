@@ -71,10 +71,10 @@ body {
     transform: rotate(135deg);
     transform-origin: center, bottom;
     z-index: 2;
-    animation-name: movimiento;
+    /* animation-name: movimiento;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 .petalo2 {
@@ -89,10 +89,10 @@ body {
     transform: rotate(110deg);
     transform-origin: center, bottom;
     z-index: 1;
-    animation-name: movimiento2;
+    /* animation-name: movimiento2;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 
 }
 
@@ -108,9 +108,9 @@ body {
     transform-origin: center, bottom;
     z-index: 1;
     animation-name: movimiento3;
-    animation-duration: 3s;
+    /* animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 .tallo {
@@ -172,16 +172,16 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 0.8ms;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 45%;
     border-radius: 100%;
     position: absolute;
-    background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    background-color: rgb(233, 144, 218);
+    box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -webkit-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -moz-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
 }
 
 .particulas2 {
@@ -193,8 +193,8 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 0.6s;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 40%;
     border-radius: 100%;
@@ -214,16 +214,16 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 3s;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 30%;
     border-radius: 100%;
     position: absolute;
-    background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    background-color: rgb(233, 144, 218);
+    box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -webkit-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -moz-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
 }
 
 .particulas4 {
@@ -235,8 +235,8 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 1.5s;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 20%;
     border-radius: 100%;
@@ -256,8 +256,8 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 3s;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 50%;
     border-radius: 100%;
@@ -277,23 +277,23 @@ h1 {
     animation-timing-function: linear;
     animation-delay: 1.2s;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 55%;
     border-radius: 100%;
     position: absolute;
-    background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -webkit-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
-    -moz-box-shadow: 0px 0px 400px 35px rgba(188, 143, 143, 1);
+    background-color: rgb(233, 144, 218);
+    box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -webkit-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
+    -moz-box-shadow: 0px 0px 400px 35px rgb(233, 144, 218);
 }
 
 .particulas7 {
     opacity: 0;
 
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 75%;
     border-radius: 100%;
@@ -313,8 +313,8 @@ h1 {
 
 .particulas8 {
     opacity: 0;
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 65%;
     border-radius: 100%;
@@ -332,8 +332,8 @@ h1 {
 
 .particulas9 {
     opacity: 0;
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 65%;
     border-radius: 100%;
@@ -351,8 +351,8 @@ h1 {
 
 .particulas10 {
     opacity: 0;
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 45%;
     border-radius: 100%;
@@ -370,16 +370,16 @@ h1 {
 
 .particulas11 {
     opacity: 0;
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 25%;
     border-radius: 100%;
     position: absolute;
-    background-color: rgb(188, 143, 143);
-    box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
-    -webkit-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
-    -moz-box-shadow: 0px 0px 400px 100px rgba(188, 143, 143, 1);
+    background-color: rgb(233, 144, 218);
+    box-shadow: 0px 0px 400px 100px rgb(233, 144, 218);
+    -webkit-box-shadow: 0px 0px 400px 100px rgb(233, 144, 218);
+    -moz-box-shadow: 0px 0px 400px 100px rgb(233, 144, 218);
     animation-name: animationParticle;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -389,8 +389,8 @@ h1 {
 
 .particulas12 {
     opacity: 0;
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     top: 22%;
     left: 5%;
     border-radius: 100%;
